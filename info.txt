@@ -35,4 +35,13 @@ testng xml file -> configure/organize/group our tests cases
 .properties file -> stores project specific global data/variables
 utility classes( ConfigReader, Driver, SeleniumUtils) -> store commonly used methods
 Framework Base Class -> store common setup and teardown operations for all test cases
+
+Design Pattern used in this Framework:
+
 Singleton -> design pattern applied to Driver class to ensure a single WebDriver instance during the test execution
+Page Object Model - design pattern used in UI test framework to reduce repeated code and improve maintainability
+Steps:
+-create a class for each page og the app, and add the webelements there with @FindBy annotations
+-Use the page class in your test by creating the object of the class and accessing the webelements through getters or suing the methods
+Page Factory - a technique of implementing Page Object Model in a more readable and efficient way:
+We use @FindBy annotations for Webelements and use PageFactory.initElements(dRiver.getDriver(), this) in the constructor of the class
