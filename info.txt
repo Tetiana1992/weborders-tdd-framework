@@ -16,8 +16,10 @@ TDD Framework Building steps:
 7.Add and configure the Base class
 8.Add properties file and ConfigReader Utility class to read from the file
 9.Add other utilities (Driver, SeleniumUtils, CSVReader)
-10.Add headless browser support
-11.
+10.Add support for command line run of the tests by configuring maven surefire plugin in pom.
+11.Add headless browser support
+12.Add cross browser testing support by adding option to pass browser from command line
+13.Add Extent Reports for pretty html reports
 
 
 
@@ -35,6 +37,8 @@ testng xml file -> configure/organize/group our tests cases
 .properties file -> stores project specific global data/variables
 utility classes( ConfigReader, Driver, SeleniumUtils) -> store commonly used methods
 Framework Base Class -> store common setup and teardown operations for all test cases
+Lombok -> generates boilerplate code (toString, getters/setters, hashcode and equals) for our page classes through annotation @Data, @AllArgsConstructor, @NoArgsConstructor
+Extent Report -> generate a detailed html report for stakeholders
 
 Design Pattern used in this Framework:
 

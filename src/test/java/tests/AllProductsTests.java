@@ -21,6 +21,7 @@ public class AllProductsTests extends TestBase {
     @Test(groups = "smoke")
     public void verifyColumns(){
        Driver.getDriver().get("https://secure.smartbearsoftware.com/samples/TestComplete12/WebOrders/Login.aspx");
+       logger.info("Navigate Homepage");
         Driver.getDriver().findElement(By.id("ctl00_MainContent_username")).sendKeys("Tester", Keys.TAB, "test", Keys.ENTER);
 
         Driver.getDriver().findElement(By.linkText("View all products")).click();
